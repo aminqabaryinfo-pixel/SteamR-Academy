@@ -1,0 +1,76 @@
+/* Google Font */
+body {
+    font-family: 'Cairo', sans-serif;
+}
+
+/* Color Variables */
+:root {
+    --primary-blue: #003366; /* أزرق غامق */
+    --primary-red: #d92d3a;   /* أحمر */
+    --light-color: #ffffff;   /* أبيض */
+    --gray-color: #f8f9fa;
+}
+
+/* Navbar */
+.navbar-brand {
+    font-weight: bold;
+    color: var(--primary-blue) !important;
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+}
+
+/* Custom Buttons */
+.btn-primary-custom {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+    color: var(--light-color);
+}
+
+.btn-primary-custom:hover {
+    background-color: #002244; /* درجة أغمق من الأزرق */
+    border-color: #002244;
+}
+
+.btn-danger-custom {
+    background-color: var(--primary-red);
+    border-color: var(--primary-red);
+    color: var(--light-color);
+}
+
+.btn-danger-custom:hover {
+    background-color: #b8222f; /* درجة أغمق من الأحمر */
+    border-color: #b8222f;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://placehold.co/1920x1080/003366/FFFFFF?text=STEAM+Education') no-repeat center center;
+    background-size: cover;
+}
+
+/* Courses Section */
+#courses {
+    background-color: var(--gray-color);
+}
+
+.course-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1) !important;
+}
+
+.course-card .card-title {
+    color: var(--primary-blue);
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-blue) !important;
+}

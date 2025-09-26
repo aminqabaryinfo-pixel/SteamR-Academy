@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SteamR Academy</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="images/logo.png" alt="SteamR Academy Logo" width="50">
+            SteamR Academy
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="#">الرئيسية</a></li>
+                <li class="nav-item"><a class="nav-link" href="#courses">الدورات</a></li>
+                <li class="nav-item"><a class="nav-link" href="#upload-section">رفع محاضرة</a></li>
+            </ul>
+            <a href="#" class="btn btn-primary-custom ms-lg-3">تسجيل الدخول</a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero-section text-center text-white d-flex align-items-center justify-content-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold">أطلق العنان لإمكانياتك مع SteamR Academy</h1>
+        <p class="lead my-3">منصة تعليمية متكاملة لمواد العلوم، التكنولوجيا، الهندسة، الفنون، والرياضيات.</p>
+        <a href="#courses" class="btn btn-danger-custom btn-lg">اكتشف دوراتنا الآن</a>
+    </div>
+</header>
+
+<!-- قسم دورات الأكاديمية -->
+<section id="courses" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold">دوراتنا المتاحة</h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm course-card">
+                    <img src="https://placehold.co/600x400/003366/FFFFFF?text=Robotics" class="card-img-top" alt="Robotics Course">
+                    <div class="card-body">
+                        <h5 class="card-title">أساسيات الروبوت والذكاء الاصطناعي</h5>
+                        <p class="card-text">تعلم بناء وبرمجة الروبوتات من الصفر واكتشف عالم الذكاء الاصطناعي.</p>
+                        <a href="#" class="btn btn-primary-custom">عرض التفاصيل</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm course-card">
+                    <img src="https://placehold.co/600x400/dc3545/FFFFFF?text=Programming" class="card-img-top" alt="Programming Course">
+                    <div class="card-body">
+                        <h5 class="card-title">مقدمة في البرمجة للأطفال</h5>
+                        <p class="card-text">دورة ممتعة وتفاعلية لتعليم الأطفال أساسيات المنطق البرمجي باستخدام أدوات مرئية.</p>
+                        <a href="#" class="btn btn-primary-custom">عرض التفاصيل</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm course-card">
+                    <img src="https://placehold.co/600x400/28a745/FFFFFF?text=Math" class="card-img-top" alt="Math Course">
+                    <div class="card-body">
+                        <h5 class="card-title">الرياضيات المتقدمة والهندسة</h5>
+                        <p class="card-text">استكشف مفاهيم رياضية متقدمة وتطبيقاتها في حل المشكلات الهندسية الواقعية.</p>
+                        <a href="#" class="btn btn-primary-custom">عرض التفاصيل</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- رفع المحاضرات -->
+<section id="upload-section" class="py-5 bg-light">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold"><i class="bi bi-cloud-arrow-up-fill"></i> لوحة تحكم رفع المحاضرات</h2>
+                    <p class="text-muted">هذا القسم مخصص للمدرسين لرفع الفيديوهات التعليمية.</p>
+                </div>
+                <div class="card p-4 shadow-sm">
+                    <form id="uploadForm">
+                        <div class="mb-3">
+                            <label for="videoTitle" class="form-label fw-bold">عنوان المحاضرة</label>
+                            <input type="text" class="form-control" id="videoTitle" placeholder="مثال: مقدمة في علم الروبوتات" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="videoFile" class="form-label fw-bold">اختر ملف الفيديو</label>
+                            <input type="file" class="form-control" id="videoFile" accept="video/*" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pdfFile" class="form-label fw-bold">ملف PDF (اختياري)</label>
+                            <input type="file" class="form-control" id="pdfFile" accept="application/pdf">
+                        </div>
+                        <div class="mb-3">
+                            <label for="courseSelect" class="form-label fw-bold">اختر الكورس</label>
+                            <select id="courseSelect" class="form-select">
+                                <option value="mobile">Mobile Application</option>
+                                <option value="embedded">Embedded System</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary-custom w-100 mt-3">رفع الآن</button>
+                    </form>
+                    <div id="uploadStatus" class="mt-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- عرض فيديوهات وPDF لكل كورس -->
+<section id="mobile-course" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4 fw-bold">كورس Mobile Application</h2>
+        <p class="text-center text-muted">للمهندس أمين الشيشيني</p>
+        <div class="row" id="mobile-videos">
+            <!-- فيديوهات الكورس -->
+        </div>
+        <h5 class="mt-3">ملفات PDF:</h5>
+        <div id="mobile-pdfs"></div>
+    </div>
+</section>
+
+<section id="embedded-course" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4 fw-bold">كورس Embedded System</h2>
+        <p class="text-center text-muted">للمهندس أمين الشيشيني</p>
+        <div class="row" id="embedded-videos">
+            <!-- فيديوهات الكورس -->
+        </div>
+        <h5 class="mt-3">ملفات PDF:</h5>
+        <div id="embedded-pdfs"></div>
+    </div>
+</section>
+
+<footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+        <p>&copy; 2025 SteamR Academy. جميع الحقوق محفوظة.</p>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
